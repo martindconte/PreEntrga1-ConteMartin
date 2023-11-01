@@ -1,0 +1,39 @@
+/* --------- FONTS ----------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
+
+$font-sizes: (
+    xs: (size: 16px, weight: 400),
+    s: (size: 18px, weight: 400),
+    m: (size: 20px, weight: 400),
+    l: (size: 25px, weight: 600),
+    xl: (size: 30px, weight: 700),
+    xxl: (size: 35px, weight: 800),
+);
+
+$font-family: (
+    font-primary: 'Saira Condensed',
+    font-secondary: 'Rajdhani',
+    font-tertiary: 'Oswald'
+);
+
+$font-primary: 'Saira Condensed', sans-serif;
+$font-secondary: 'Rajdhani', sans-serif;
+
+@each $font, $name in $font-family {
+    $font-key: $font;
+    $font-value: $name;
+
+    @each $size-name, $size-value in $font-sizes {
+        $size: map-get($size-value, size);
+        $weight: map-get($size-value, weight);
+
+        %#{$font-key}-#{$size-name} {
+            font-family: $font-value;
+            font-size: $size;
+            font-weight: $weight;
+        }
+    }
+}

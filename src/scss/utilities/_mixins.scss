@@ -1,0 +1,34 @@
+/* ---------- MIXIN ---------- */
+
+@mixin row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin block-center ($margin) {
+    display: block;
+    margin: #{$margin} auto;
+}
+
+@mixin size-img ($width, $height) {
+    width: #{$width};
+    height: #{$height};
+}
+
+@mixin breakpoint-max ($value) {
+    @media screen and (max-width: $value) {
+        @content;
+    }
+}
+
+@mixin grid-equal ($cant,$size) {
+    display: grid;
+    grid-template-columns: repeat(#{$cant},#{$size});
+    @content
+}

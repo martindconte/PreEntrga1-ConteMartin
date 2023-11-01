@@ -1,0 +1,18 @@
+.cartWidget {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    span {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 4px;
+        right: 14px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+    }
+}

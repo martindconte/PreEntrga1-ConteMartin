@@ -1,0 +1,23 @@
+/* ---------- RESET ----------- */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    &:visited {
+        color: inherit;
+        text-transform: none;
+    }
+    &:-webkit-any-link {
+        color: inherit;
+    }
+}

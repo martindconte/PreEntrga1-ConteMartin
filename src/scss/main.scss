@@ -1,0 +1,26 @@
+/* ---------- BASE ----------- */
+
+@import './base/reset';
+@import './base/fonts';
+@import './base/colors';
+
+/* ------- UTILITIES --------- */
+
+@import './utilities/mixins';
+
+/* --------- LAYOUT ---------- */
+
+@import './layouts/navBar';
+@import './layouts/footer';
+
+/* ------- COMPONENTS -------- */
+
+@import './components/cartWidget';
+@import './components/itemListContainer';
+
+/* ---------- PAGES ---------- */
+
+// @import './pages/index';
+// @import './pages/login';
+// @import './pages/categorias';
+// @import './pages/productos';

@@ -1,0 +1,81 @@
+/* --------- FOOTER ---------- */
+
+.footer {
+    background-image: url('../../../src/components/Footer/img/footer-background.jpg');
+    background-size: 100% 100%;
+    opacity: 0.9;
+    background-position: top center;
+    padding: 50px;
+    color: $color-secondary;
+    h4 {
+        a {
+            @extend %font-primary-l;
+            color: $color-secondary;
+            padding-right: 10px;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            a {
+                list-style: none;
+                display: inline-flex;
+                gap: 10px;
+                @extend %font-primary-m;
+                text-decoration: none;
+                &:hover {
+                    font-weight: 800;
+                    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #a70061, 0 0 30px #a70061, 0 0 40px #a70061, 0 0 55px #a70061, 0 0 75px #a70061;                
+                }
+            }
+        }
+    }
+    i {
+        font-size: 30px;
+    }
+    &__grid {
+        @include grid-equal (4,1fr) {
+        gap: 5px;
+        grid-template-areas:
+            "electronica instrumentos teclados info"
+            "electronica instrumentos redes    contacto";
+        }
+    }
+    &__electronica {
+        grid-area: electronica;
+    }
+    &__instrumentos {
+        grid-area: instrumentos;
+    }
+    &__teclados {
+        grid-area: teclados;
+    }
+    
+    &__info {
+        grid-area: info;
+    }
+    
+    &__contacto {
+        grid-area: contacto;
+        img {
+            height: 40px    ;
+        }
+    }
+    
+    &__redes {
+        grid-area: redes;
+        img {
+            width: 35px;
+            margin: 5px;
+        }
+        ul {
+            display: inline-flex;
+            align-items: center;
+            li {
+                display: inline;
+            }
+        }
+    }
+}
