@@ -1,6 +1,6 @@
 import CartWidget from '../CartWidget/CartWidget';
-import logo from '../img/header-logo-menu.svg';
-import imgLogueo from '../img/header-logueo.svg'
+import logo from '../../img/header-logo-menu.svg';
+import imgLogueo from '../../img/header-logueo.svg'
 
 function NavBar() {
     return (
