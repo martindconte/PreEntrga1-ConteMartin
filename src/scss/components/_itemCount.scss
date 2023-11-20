@@ -1,0 +1,26 @@
+.contador {
+    @include column;
+    width: 170px;
+    gap: 10px;
+    @extend %font-primary-m;
+    margin: 0 auto;
+    &__controles {
+        display: inline-flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @extend %font-primary-m;
+        font-weight: 500;
+        background-color: #9898f2;
+        padding: 5px 20px;
+        border-radius: .3rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

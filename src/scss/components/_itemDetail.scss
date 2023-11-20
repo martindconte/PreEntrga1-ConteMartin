@@ -1,0 +1,58 @@
+// .titulo {
+//     @extend %font-primary-m;
+//     font-weight: 800;
+// }
+
+.itemDetail {
+    // @include row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 5px;
+    padding: 100px 0px 10px 0px;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    &__imagen {
+        padding: 10px;
+        width: 40%;
+
+        img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+            max-height: 600px;
+        }
+    }
+
+    &__descripcion {
+        width: 40%;
+        max-width: 500px;
+        padding: 0 20px;
+        p {
+            @extend %font-secondary-m;
+            font-weight: 500;
+            padding: 5px;
+            span {
+                @extend %font-primary-l;
+                font-weight: 600;
+            }
+        }
+    }
+    &__botones {
+        @include column;
+        gap: 10px;
+        width: 200px;
+        padding: 10px;
+        p {
+            @extend %font-secondary-m;
+            font-weight: 500;
+            padding: 5px;
+            span {
+                @extend %font-primary-l;
+                font-weight: 600;
+            }
+        }
+    }
+}
