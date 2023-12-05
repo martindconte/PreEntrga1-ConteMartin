@@ -1,23 +1,25 @@
 import Item from './Item'
 
-function ItemList( { products }) {
+function ItemList({ products }) {
 
-        return (
+  console.log(products)
+  return (
 
     <>
-      {products?.length ? (
+      {
+        // products?.length ? (
 
-        products.map(product => (
+          products.map(product => (
 
-          product.stock > 0 &&
-          <Item key={product.id} product={product} />
-        ))
-        
-      )
-       : <p>Cargando...</p>  }
-    
-    {/* <div>ItemList</div> */}
-    
+            // product.stock > 0 &&
+            <Item key={product.id} {...product} />
+          ))
+
+        // ) : <p>Cargando...</p>
+      }
+
+      {/* <div>ItemList</div> */}
+
     </>
   )
 }
