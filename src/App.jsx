@@ -1,10 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer'
-import Cart from './components/Cart'
 import { CartProvider } from './context/CartContext'
-import Checkout from './components/Checkout'
+import { NavBar, Checkout, ItemListContainer, ItemDetailContainer, Cart } from './components'
 
 
 function App() {

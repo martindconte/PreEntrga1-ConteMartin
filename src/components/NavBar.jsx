@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
-import CartWidget from '../components/CartWidget';
 import logo from '../img/header-logo-menu.svg';
 import imgLogueo from '../img/header-logueo.svg'
+import CartWidget from '../components/CartWidget';
 
 function NavBar() {
     return (

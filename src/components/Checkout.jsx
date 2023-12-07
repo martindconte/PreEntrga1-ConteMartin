@@ -4,7 +4,6 @@ import { Timestamp, addDoc, collection, documentId, getDocs, query, where, write
 import { db } from '../firebase/clients'
 import CheckoutForm from './CheckoutForm'
 
-
 const Checkout = () => {
 
   const [loading, setLoading] = useState(false)

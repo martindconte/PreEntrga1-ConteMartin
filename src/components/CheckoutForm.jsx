@@ -1,6 +1,5 @@
 import { useState } from "react"
 
-
 const CheckoutForm = ({ onConfirm }) => {
 
     const [name, setName] = useState('')
@@ -28,13 +27,14 @@ const CheckoutForm = ({ onConfirm }) => {
             
             {error ? <p>TODOS LOS DATOS SON OBLIGATORIOS</p> : null}
 
-            <form onSubmit={handleConfirm}>
+            <form noValidate onSubmit={handleConfirm}>
                 <label htmlFor="name">Nombre</label>
                 <input
                     required
                     id="name"
                     type="text"
                     value={name}
+                    placeholder="Ingrese su nombre"
                     onChange={ ( { target } ) => setName(target.value.trim())  }
                 />
                 <label htmlFor="phone">Telefono</label>
@@ -44,6 +44,7 @@ const CheckoutForm = ({ onConfirm }) => {
                     type="number"
                     min="0"
                     value={phone}
+                    placeholder="Ingrese un numero de contacto"
                     onChange={ ( { target } ) => setPhone(target.value.trim())  }
                 />
                 <label htmlFor="email">e-mail</label>
@@ -52,6 +53,7 @@ const CheckoutForm = ({ onConfirm }) => {
                     id="email"
                     type="email"
                     value={email}
+                    placeholder="Ingrese un mail en donde recibira la informacion de su compra"
                     onChange={ ( { target } ) => setEmail(target.value.trim())  }
                 />
                 <button type="submit">CREAR PEDIDO</button>
