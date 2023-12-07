@@ -28,18 +28,16 @@ const ItemDetailContainer = () => {
         }
         setProduct(productAdapted)
       })
-      .catch(error => console.log(error))
+      .catch(error => console.error(error))
       .finally(setLoading(false))
 
   }, [itemId])
-  
 
 
   return (
-    <>
-
-      <ItemDetail {...product} />
-    </>
+    loading
+      ? <span className="loader"></span>
+      : <ItemDetail {...product} />
   )
 }
 

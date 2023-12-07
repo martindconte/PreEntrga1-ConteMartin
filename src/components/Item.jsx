@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom"
 
-function Item( { id, marca, modelo, tipo, origen, descripcion, imagen, precio, stock } ) {
-
-    // const { id, marca, modelo, tipo, origen, descripcion, imagen, precio, stock } = product
-
-    // const imgBasePath = '/public/img'
+function Item( { id, marca, modelo, origen, descripcion, imagen, precio, stock } ) {
 
     return (
         <div className="tarjeta">
             <div className="tarjeta__imagen" >
-                {/* <img src={`public/img/${imagen}`} alt="imagen producto" /> */}
-                {/* <img src={`${imgBasePath}/${imagen}`} alt={imagen} /> */}
                 <img src={imagen} alt="" />
             </div>
             <div className="tarjeta__descripcion">

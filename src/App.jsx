@@ -24,10 +24,6 @@ function App() {
           </Routes>
         </CartProvider>
       </BrowserRouter>
-
-      {/* <NavBar /> */}
-      {/* <ItemListContainer greeting={'Bienvenidos - via props'} /> */}
-      {/* <ItemDetailContainer /> */}
     </>
   )
 }

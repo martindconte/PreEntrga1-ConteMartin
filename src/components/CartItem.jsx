@@ -3,11 +3,10 @@ import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 
 const CartItem = ({ id, marca, modelo, origen, imagen, quantity, precio }) => {
-  // console.log(imagen)
-  // const imgBasePath = '/public/img'
 
-  const { removeItem } = useContext(CartContext)
+  const { cart, removeItem } = useContext(CartContext)
 
+  console.log(cart)
   return (
     <article className='cartItem'>
       {/* <img src={`/public/img/${imagen}`} alt={imagen} /> */}

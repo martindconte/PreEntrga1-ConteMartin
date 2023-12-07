@@ -8,19 +8,18 @@ export const CartProvider = ({ children }) => {
 
     console.log(cart)
 
-    // useEffect(() => {
-    //     // Verifico si hay datos en LS al montar el componente
-    //     const cartLS = JSON.parse(localStorage.getItem("cart")) || [];
-    //     console.log(cartLS)
-    //     setCart(cartLS);
-    // }, []);
+    useEffect(() => {
+        // Verifico si hay datos en LS al montar el componente
+        const cartLS = JSON.parse(localStorage.getItem("cart")) || [];
+        console.log(cartLS)
+        setCart(cartLS);
+    }, []);
+    
+    useEffect(() => {
+        // Actualizo el localStorage cuando el carrito cambie
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
-
-    // console.log(cart)
-    // useEffect(() => {
-    //     // Actualizo el localStorage cuando el carrito cambie
-    //     localStorage.setItem("cart", JSON.stringify(cart));
-    // }, [cart]);
 
     const addItem = (item, quantity) => {
         if (!isInCart(item.id)) {
@@ -46,9 +45,6 @@ export const CartProvider = ({ children }) => {
 
     const totalQuantity = cart.reduce((total, prod) => total + prod.quantity, 0);
     const total = cart.reduce((total, prod) => total + (prod.precio*prod.quantity), 0);
-
-    console.log(totalQuantity)
-    console.log(total)
 
     return (
         <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, totalQuantity, total }}>

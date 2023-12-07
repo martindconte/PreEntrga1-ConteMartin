@@ -34,7 +34,6 @@ const Checkout = () => {
       const productsRef = collection(db, 'productos')
 
       const productsAddedFromFirestore = await getDocs(query(productsRef, where(documentId(), 'in', ids)))
-      console.log(productsAddedFromFirestore)
       const { docs } = productsAddedFromFirestore
 
       docs.forEach(doc => {
@@ -72,15 +71,15 @@ const Checkout = () => {
 
   }
 
-  if(loading) {return <h1 className='checkout'>Generando orden...</h1>}
+  if(loading) return <h1 className='checkout'><span className='loader'></span>Generando orden...</h1>
 
   if(orderId) {return <h1 className='checkout'>Orden Generada: { orderId } </h1>}
 
   return (
-    <div className='checkout'>
-      <h1>Checkout</h1>
-      <CheckoutForm onConfirm={ createOrder }  />
-    </div>
+      <div className='checkout'>
+        <h1>Complete sus Datos</h1>
+        <CheckoutForm onConfirm={ createOrder }  />
+      </div>
   )
 }
 

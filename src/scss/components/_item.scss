@@ -8,15 +8,15 @@
     justify-content: space-between;
     height: 250px;
     max-width: 1000px;
-    margin: 5px;
+    margin: 20px auto;
     padding: 10px 0px;
-    border: solid 1px #cfcfcf;
     background-color: white;
     border-radius: .75rem;
     width: 80%;
+    box-shadow: 0px 20px 20px 0px #454545;
     &__imagen {
         padding: 10px;
-        width: 20%;
+        width: 30%;
 
         img {
             object-fit: contain;
@@ -26,7 +26,7 @@
     }
 
     &__descripcion {
-        width: 75%;
+        width: 70%;
         max-width: 500px;
         padding: 0 20px;
         p {
@@ -43,7 +43,7 @@
     &__botones {
         @include column;
         gap: 10px;
-        width: 200px;
+        width: 150px;
         padding: 10px;
         .btnComprar {
             @extend %font-secondary-s;
