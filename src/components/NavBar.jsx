@@ -18,27 +18,27 @@ function NavBar() {
                         <NavLink to="/">Categorias</NavLink>
                         <ul className='navBar__submenu'>
                             <li>
-                                <NavLink to="/category/bateria">Baterias</NavLink>
+                                <NavLink to={"/category/bateria"} className={ ( { isActive } ) => isActive ? 'activeLink' : '' } >Baterias</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/category/teclado">Teclados</NavLink>
+                                <NavLink to="/category/teclado" className={ ( { isActive } ) => isActive ? 'activeLink' : '' }>Teclados</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/category/amplificador">Amplificadores</NavLink>
+                                <NavLink to="/category/amplificador" className={ ( { isActive } ) => isActive ? 'activeLink' : '' }>Amplificadores</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/category/placadeaudio">Placas de audio</NavLink>
+                                <NavLink to="/category/placadeaudio" className={ ( { isActive } ) => isActive ? 'activeLink' : '' }>Placas de audio</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/category/controladormidi">Controladores Midi</NavLink>
+                                <NavLink to="/category/controladormidi" className={ ( { isActive } ) => isActive ? 'activeLink' : '' }>Controladores Midi</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/">Todos los productos</NavLink>
                             </li>
                         </ul>
                     </li>
-                    <li><NavLink to="/category/guitarra">Guitarras</NavLink></li>
-                    <li><NavLink to="/category/bajo">Bajos</NavLink></li>
+                    <li><NavLink to="/category/guitarra" className={ ( { isActive } ) => isActive ? 'activeLink' : '' }>Guitarras</NavLink></li>
+                    <li><NavLink to="/category/bajo" className={ ( { isActive } ) => isActive ? 'activeLink' : '' }>Bajos</NavLink></li>
                 </ul>
             </div>
             <div className='navBar__usuario'>
