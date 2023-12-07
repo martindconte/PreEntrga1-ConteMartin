@@ -4,9 +4,8 @@ import { CartContext } from '../context/CartContext'
 
 const CartItem = ({ id, marca, modelo, origen, imagen, quantity, precio }) => {
 
-  const { cart, removeItem } = useContext(CartContext)
+  const { removeItem } = useContext(CartContext)
 
-  console.log(cart)
   return (
     <article className='cartItem'>
       <img src={imagen} alt={imagen} />
